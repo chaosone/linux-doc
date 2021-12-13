@@ -1,36 +1,51 @@
 <!-- vim-markdown-toc GFM -->
 
-    * [install yay on arch(install software from aur)](#install-yay-on-archinstall-software-from-aur)
-    * [install linux brew](#install-linux-brew)
-    * [install node & npm(nodejs package manager)](#install-node--npmnodejs-package-manager)
-    * [pip install & configration](#pip-install--configration)
-    * [install source-code-pro-fonts](#install-source-code-pro-fonts)
-    * [set goproxy (installing yay time out)](#set-goproxy-installing-yay-time-out)
-    * [install ranger pluign](#install-ranger-pluign)
-    * [alsamixer to control sound](#alsamixer-to-control-sound)
-    * [chromium bookmarks location](#chromium-bookmarks-location)
-    * [auto-pep8 not found when format code in (vim/nvim).](#auto-pep8-not-found-when-format-code-in-vimnvim)
-    * [install samba server && configration](#install-samba-server--configration)
-    * [ag usage (from tldr)](#ag-usage-from-tldr)
-    * [add archlinuxcn repo](#add-archlinuxcn-repo)
-    * [pacman pgp key error](#pacman-pgp-key-error)
-    * [用 whiskermenu 代替默认的 xfce4 开始菜单](#用-whiskermenu-代替默认的-xfce4-开始菜单)
-    * [use swap file instead of swap space](#use-swap-file-instead-of-swap-space)
-    * [install bspwm](#install-bspwm)
-    * [install steam](#install-steam)
-    * [where is the documentation and example(template) on linux](#where-is-the-documentation-and-exampletemplate-on-linux)
-    * [install fzf(using git)](#install-fzfusing-git)
-    * [alacritty theme selector](#alacritty-theme-selector)
-    * [config sxhkd shorcut](#config-sxhkd-shorcut)
-    * [Linux Font](#linux-font)
-        * [wd-dict install](#wd-dict-install)
-        * [config static ip on linux](#config-static-ip-on-linux)
-    * [Editing shell cmd with $EDITOR](#editing-shell-cmd-with-editor)
-    * [set the display resolution](#set-the-display-resolution)
-        * [使用清华源替换官方 aur 地址](#使用清华源替换官方-aur-地址)
-    * [set LANG enviroment](#set-lang-enviroment)
-    * [xmodmap 修改键位绑定](#xmodmap-修改键位绑定)
+* [install yay on arch(install software from aur)](#install-yay-on-archinstall-software-from-aur)
+* [install linux brew](#install-linux-brew)
+* [install node & npm(nodejs package manager)](#install-node--npmnodejs-package-manager)
+* [pip install & configration](#pip-install--configration)
+* [install source-code-pro-fonts](#install-source-code-pro-fonts)
+* [set goproxy (installing yay time out)](#set-goproxy-installing-yay-time-out)
+* [install ranger pluign](#install-ranger-pluign)
+* [alsamixer to control sound](#alsamixer-to-control-sound)
+* [chromium bookmarks location](#chromium-bookmarks-location)
+* [auto-pep8 not found when format code in (vim/nvim).](#auto-pep8-not-found-when-format-code-in-vimnvim)
+* [install samba server && configration](#install-samba-server--configration)
+* [ag usage (from tldr)](#ag-usage-from-tldr)
+* [add archlinuxcn repo](#add-archlinuxcn-repo)
+* [pacman pgp key error](#pacman-pgp-key-error)
+* [/var/cache/ 空间占用过大](#varcache-空间占用过大)
+* [用 whiskermenu 代替默认的 xfce4 开始菜单](#用-whiskermenu-代替默认的-xfce4-开始菜单)
+* [use swap file instead of swap space](#use-swap-file-instead-of-swap-space)
+* [install bspwm](#install-bspwm)
+* [install steam](#install-steam)
+* [where is the documentation and example(template) on linux](#where-is-the-documentation-and-exampletemplate-on-linux)
+* [install fzf(using git)](#install-fzfusing-git)
+* [alacritty theme selector](#alacritty-theme-selector)
+* [config sxhkd shorcut](#config-sxhkd-shorcut)
+* [Linux Font](#linux-font)
+    * [wd-dict install](#wd-dict-install)
+    * [config static ip on linux](#config-static-ip-on-linux)
+* [Editing shell cmd with $EDITOR](#editing-shell-cmd-with-editor)
+* [set the display resolution](#set-the-display-resolution)
+* [arch 安装中文字体](#arch-安装中文字体)
+    * [使用清华源替换官方 aur 地址](#使用清华源替换官方-aur-地址)
+* [set LANG enviroment](#set-lang-enviroment)
+* [xmodmap 修改键位绑定](#xmodmap-修改键位绑定)
 * [pacman 备份和恢复已安装软件包](#pacman-备份和恢复已安装软件包)
+* [shell 脚本中 echo 显示内容带颜色](#shell-脚本中-echo-显示内容带颜色)
+* [显示当前正在运行的 shell 类型](#显示当前正在运行的-shell-类型)
+* [use terminus font on tty](#use-terminus-font-on-tty)
+* [sed 直接修改文件](#sed-直接修改文件)
+* [bash 批量重命名](#bash-批量重命名)
+* [echo ssid connected](#echo-ssid-connected)
+* [逐行读取的区别(shell)](#逐行读取的区别shell)
+* [youtube-dl 下载视频为 mp3](#youtube-dl-下载视频为-mp3)
+* [xargs usage](#xargs-usage)
+* [Install packages from a text file](#install-packages-from-a-text-file)
+* [cp arguments](#cp-arguments)
+* [show and execable cmd's info](#show-and-execable-cmds-info)
+* [crontab 定时任务](#crontab-定时任务)
 
 <!-- vim-markdown-toc -->
 
@@ -88,11 +103,14 @@ _pip.conf:_
 
 #### install source-code-pro-fonts
 
+```
 sudo pacman -S adobe-source-code-pro-fonts
+```
 
 #### set goproxy (installing yay time out)
 
-export GOPROXY=https://goproxy.io
+`export GOPROXY=https://goproxy.io`
+,or put it to your bashrc/zshrc
 
 #### install ranger pluign
 
@@ -117,9 +135,12 @@ defaults.ctl.card 1
 
 #### auto-pep8 not found when format code in (vim/nvim).
 
-To solve it, simply run `pip install --user autopep8`  
-or if you want it globally:  
-`sudo pip install autopep8`
+To solve it, simply run `pip install --user autopep8` for singal user,
+or if you want it globally:
+
+```
+sudo pip install autopep8
+```
 
 #### install samba server && configration
 
@@ -128,10 +149,30 @@ Samba 服务的配置文件是 /etc/samba/smb.conf，smb.conf(5)提供了详细�
 samba 软件包没有提供此文件，启动 smb.service 前需要先创建这个文件。从 这里 可以获取到示例文件。  
 从上面获取的默认配置文件里把日志 log file 设置到一个不能写的地方, 这会引起错误。下面的办法可以解决这个问题:
 
+```
+sambapasswd -a user
+```
+
+- there's an example of _smb.conf_:  
+  grep -v '#' /etc/samba/smb.conf
+
+[global]  
+ workgroup = xinwei  
+ server string = Samba Server Version %v  
+ netbios name = lulu  
+ security = user  
+ [share]  
+ path = /home/why/333  
+ browseable = yes  
+ writable = yes  
+ read only = no  
+ guest ok = yes
+
 #### ag usage (from tldr)
 
 - Find files containing "foo", and print the line matches in context:
-  ag foo
+
+  - ag foo
 
   - Find files containing "foo" in a specific directory:
     ag foo path/to/directory
@@ -151,7 +192,7 @@ samba 软件包没有提供此文件，启动 smb.service 前需要先创建这�
 
 #### add archlinuxcn repo
 
-使用说明 
+使用说明   
 在 /etc/pacman.conf 文件末尾添加两行：
 
 ```
@@ -186,6 +227,12 @@ pacman-key --populate archlinux。
 
 ```bash
 pacman -S archlinux-keyring。
+```
+
+#### /var/cache/ 空间占用过大
+
+```
+pacman -Scc
 ```
 
 #### 用 whiskermenu 代替默认的 xfce4 开始菜单
@@ -245,7 +292,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 #### alacritty theme selector
 
-make sure you have **paru** (aur helper)
+make sure that you have **paru** (aur helper)
 
 ```
 paru -S alacritty-themes
@@ -309,6 +356,7 @@ sudo pacman -Rnsc <package_name>
 
 ```
 paru -S alacritty-themes
+alacritty-themes
 ```
 
 ##### wd-dict install
@@ -336,7 +384,7 @@ nvim /etc/resolv.conf</br>
 
 #### Editing shell cmd with $EDITOR
 
-<c-x><c-e> can edit the current shell command
+\<c-x>\<c-e> can edit the current shell command
 
 显示命令类型</br>
 type -a ping
@@ -348,6 +396,8 @@ xrandr -q
 xrandr --output eDP-1 --mode 1920x1080 --rate 60.00
 xrandr --listmonitors
 ```
+
+#### arch 安装中文字体
 
 sudo pacman -S wqy-microhei ttf-nerd-fonts-symbols
 
@@ -402,22 +452,166 @@ xmodmap -e "keycode 133 = Alt_L"
 xmodmap -e "remove mod4 = Alt_L"
 ```
 
-### pacman 备份和恢复已安装软件包
+#### pacman 备份和恢复已安装软件包
 
 定期备份软件包是个好习惯。万一系统出了大问题，需要重装，就可以利用备份的软件包恢复到原先的系统。
 
-    第一步，生成系统上安装的非本地（即从官方仓库获取的）软件包列表：
+1. 生成系统上安装的非本地（即从官方仓库获取的）软件包列表：
 
 ```
 $ comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > pkglist
 ```
 
-    把生成的pkglist存储在一个安全的地方，比如U盘，或者gist.github.com、evernote、dropbox之类的文本储存网站。
+2. 把生成的 pkglist 存储在一个安全的地方，比如 U 盘，或者 gist.github.com、evernote、dropbox 之类的文本储存网站。
 
-    今后重装系统时，把pkglist复制到新系统。
+今后重装系统时，把 pkglist 复制到新系统。
 
-使用如下命令安装所有软件包：
+3. 使用如下命令安装所有软件包：
 
 ```
 pacman -S $(< pkglist)
 ```
+
+#### shell 脚本中 echo 显示内容带颜色
+
+shell 脚本中 echo 显示内容带颜色显示,echo 显示带颜色，需要使用参数-e  
+格式如下：
+
+`echo -e "\033[字背景颜色；文字颜色m字符串\033[0m" `
+
+例如：
+
+> echo -e "\033[41;36m something here \033[0m"
+
+#### 显示当前正在运行的 shell 类型
+
+```
+echo $0
+```
+
+#### use terminus font on tty
+
+install terminus:
+
+```
+sudo pacman -S terminus-font
+```
+
+edit _/etc/vconsole.conf:_  
+FONT=ter-932n.psf.gz
+
+#### sed 直接修改文件
+
+`sed -i 's/111/aaa' example.txt`
+
+#### bash 批量重命名
+
+假如我们现在有一堆 .txt 文件，我们想将它们的后缀改成 .cpp。先来看完整的代码：
+
+```bash
+#!/bin/bash
+for name in $(ls *.txt)
+do
+    mv $name ${name%.txt}.cpp
+done
+```
+
+#### echo ssid connected
+
+```
+iwctl station wlan0 show \
+| grep -i network | sed 's/Connected network/SSID:/'
+```
+
+#### 逐行读取的区别(shell)
+
+说明：
+假定有个名为 file 的文本文件.
+
+```
+$ cat file
+aaaa
+bbbb
+cccc dddd
+```
+
+```
+$ cat file | while read line; do echo $line; done
+aaaa
+bbbb
+cccc dddd
+```
+
+```
+for line in $(<file); do echo $line; done
+aaaa
+bbbb
+cccc
+dddd
+```
+
+**区别**:for 以空格作为分割符，while 以换行作为分割符.
+
+#### youtube-dl 下载视频为 mp3
+
+youtube-dl -x --audio-format mp3 'url'
+
+#### xargs usage
+
+在 linux 中许多命令只能支持直接在命令后输入参数，只有少部分命令支持从 stdin 作为参数，而这时候 xargs 命令就派上用场了.  
+_xargs 命令最重要的作用就是将标准输入作为 linux 命令的输入_
+
+_interactive find:_
+
+```
+xargs -L 1 find -name
+```
+
+上面命令指定了每一行（-L 1）作为命令行参数，分别运行一次命令（find -name）。
+xargs -n 2 find -name
+上面命令指定了每一项（-n 2）作为命令行参数(默认以空格分割)，分别运行一次命令（find -name）。
+
+```
+cat test.txt | xargs -I line sh -c 'echo line;mkdir line'
+```
+
+解释:从文件读取每一行，xargs 转换为 sh 命令的参数，执行一次 echo 和一次 mkdir.
+
+```
+echo "banana:apple:orange" | xargs -d: -n1
+banana
+apple
+orange
+```
+
+#### Install packages from a text file
+
+```
+pacman -S $(cat /tmp/pack1.txt)
+```
+
+```
+cat /tmp/pack1.txt | xargs pacman -S
+```
+
+```
+for pack in `cat /tmp/pack1.txt` ; do apt -y install $pack; done
+```
+
+#### cp arguments
+
+-n do not overwrite
+-v explain what is being done
+-L follow the symbolic links
+
+#### show and execable cmd's info
+
+```
+type -a rm
+file $(which ping)
+```
+
+#### crontab 定时任务
+
+_/2 _ \* \* \* date >> ~/date.log
+min hour date month day-of-week

@@ -1,0 +1,70 @@
+
+find . --max-depth 2 -name "*sh" | xrags grep i3lock 
+find -name "*py" | xargs sed -i '1 i #!/usr/bin/python3'
+pa='(^0?[1-9]|1[0-2])\-([0-2][0-9]|3[0-1])'
+echo '12-08 13-33 9-11 1-31' | grep -E "$pa"
+
+fd manual:
+OPTION:
+-e  assign the file name extension
+-H  Include hidden files and dirs
+-a  show the absolute path of results
+-td --type directory
+-tf --type file
+-te --type empty
+--regex perform a regular expression based search
+
+fd -e jpg -x convert {} {.}.png
+fd -H -t l zsh | xargs ls -al
+
+#### grep command
+DESCRIPTION
+grep  searches  for  PATTERNS  in  each  FILE.   PATTERNS is one or more patterns separated by
+       newline characters, and grep prints each line that  matches  a  pattern.   Typically  PATTERNS
+       should be quoted when grep is used in a shell command.
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+[OPTION]
+-e
+-i case insensitive
+-v print the lines unmatching
+-R if -R is specified, grep will traversal this PATH.
+-o --only-matching 只打印匹配的字符串,而不是整行
+-q 静默执行,执行成功返回 exit 0,通常在脚本中使用.
+grep -iR 'pattern' /PATH 递归查找某个目录
+grep -iR 'pattern' $(pwd)   显示完整路径
+grep -IRi 'pattern'  在当前目录递归搜索,忽略大小写,忽略二进制文件
+grep -E -niRI '^[a-z]{4,5}:.*' -E,use regex match the pattern
+
+example:
+pa='(^0?[1-9]|1[0-2])\-([0-2][0-9]|3[0-1])'
+echo "31-11 88-15 12-18" | grep -E "$pa"
+
+
+SYNOPSIS
+       ag [options] pattern [path ...]
+
+ag is case-insensitively by default
+
+ag 'pattern' -G py
+ag --list-file-types
+ag 'pattern' --python
+ag -- --foo: Find matches for "--foo" in the current directory. (As  with  most  UNIX  command
+       line  utilities, "--" is used to signify that the remaining arguments should not be treated as
+       options.)
+
+ag 'Lid' /etc/systemd
+ag --color-path 31 'zhang' ~/test
+ag -A -B 333 /etc/samba/smb.conf
+
+
+#### nushell manual
+config          #show the current config
+config path     #show where the config file is
+ls | sort-by modified
+ls | sort-by size | reverse
+ls | where type == Dir
+sys | get temp | pivot    # get the table of temp & switch row and column

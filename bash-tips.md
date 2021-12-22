@@ -1,4 +1,4 @@
-#### echo
+#### echo tips
 
 echo a;echo b
 a
@@ -12,6 +12,28 @@ echo -e "hello\nworld"
 hello
 world
 -e 参数 解释特殊字符
+
+#### while loop
+
+```
+i=0
+while true:
+do
+i=$(($i+1))
+sleep 0.1
+echo "$i" >> ~/test/test3.txt
+done
+```
+
+use `tail -f` can print the change real-time to stdout of a file,this is used to monitor the system log.
+
+#### login shell & nologin shell
+
+有一种判断 login shell vs non-login shell 的非常快速的方法，使用命令 echo $0
+
+-bash 中 - 表示当前是一个 login shell  
+bash 表示不是 login shell
+nologin shell 只会读取~/.bashrc(or ~/.zshrc),nologin shell 不可直接交互,由 login shell 生成
 
 #### bash 扩展
 
@@ -64,6 +86,7 @@ echo $0
 ```
 sed -i 's/111/aaa' example.txt
 sed -n '/111/,+6 p' example.txt
+cat ip.txt |sed -n '/IPv4/,+6 p' | sed -n '1,3p;6p'
 ```
 
 删除空白行
@@ -296,3 +319,39 @@ More information: https://github.com/onetrueawk/awk.
 
 - Print all the lines which the 10th column value is between a min and a max :
   awk '($10 >= min_value && $10 <= max_value)'
+
+```
+uname -r | cut -c -4,10-
+```
+
+#### lsof
+
+lsof /dev/sdb1 #show which process is using the device,when a disk can not be mounted
+lsof -t $(which dwm)
+
+#### sed tips
+
+在[xxxx]上面添加一行:  
+sed -i 's#^\[#\n\[#' /etc/samba/smb.conf
+sed -i 's#^\[# i \n]' /etc/samba/smb.conf
+sed -i '/print/ i \\' example.py
+
+find -name "\*py" | xargs sed -i '1 i #!/usr/bin/python3'
+
+#### 重定向
+
+tr [a-z] [A-Z] < file.txt > FILE.txt
+echo "$(<file.txt)"
+为了保证换行符可以原样输出,需要用""把命令括起来.
+
+```
+var="$(<lines.sh)"
+IFS1=$IFS;
+IFS=$'\n'
+arr()=$(var)
+echo "${arr[@]}"
+IFS=$IFS1
+```
+
+echo $(<file.txt)
+echo "$(<file.txt)"

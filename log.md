@@ -1,51 +1,58 @@
 <!-- vim-markdown-toc GFM -->
 
-* [install yay on arch(install software from aur)](#install-yay-on-archinstall-software-from-aur)
-* [install linux brew](#install-linux-brew)
-* [install node & npm(nodejs package manager)](#install-node--npmnodejs-package-manager)
-* [pip install & configration](#pip-install--configration)
-* [install source-code-pro-fonts](#install-source-code-pro-fonts)
-* [set goproxy (installing yay time out)](#set-goproxy-installing-yay-time-out)
-* [install ranger pluign](#install-ranger-pluign)
-* [alsamixer to control sound](#alsamixer-to-control-sound)
-* [chromium bookmarks location](#chromium-bookmarks-location)
-* [auto-pep8 not found when format code in (vim/nvim).](#auto-pep8-not-found-when-format-code-in-vimnvim)
-* [install samba server && configration](#install-samba-server--configration)
-* [ag usage (from tldr)](#ag-usage-from-tldr)
-* [add archlinuxcn repo](#add-archlinuxcn-repo)
-* [pacman pgp key error](#pacman-pgp-key-error)
-* [/var/cache/ 空间占用过大](#varcache-空间占用过大)
-* [用 whiskermenu 代替默认的 xfce4 开始菜单](#用-whiskermenu-代替默认的-xfce4-开始菜单)
-* [use swap file instead of swap space](#use-swap-file-instead-of-swap-space)
-* [install bspwm](#install-bspwm)
-* [install steam](#install-steam)
-* [where is the documentation and example(template) on linux](#where-is-the-documentation-and-exampletemplate-on-linux)
-* [install fzf(using git)](#install-fzfusing-git)
-* [alacritty theme selector](#alacritty-theme-selector)
-* [config sxhkd shorcut](#config-sxhkd-shorcut)
-* [Linux Font](#linux-font)
-    * [wd-dict install](#wd-dict-install)
-    * [config static ip on linux](#config-static-ip-on-linux)
-* [Editing shell cmd with $EDITOR](#editing-shell-cmd-with-editor)
-* [set the display resolution](#set-the-display-resolution)
-* [arch 安装中文字体](#arch-安装中文字体)
-    * [使用清华源替换官方 aur 地址](#使用清华源替换官方-aur-地址)
-* [set LANG enviroment](#set-lang-enviroment)
-* [xmodmap 修改键位绑定](#xmodmap-修改键位绑定)
-* [pacman 备份和恢复已安装软件包](#pacman-备份和恢复已安装软件包)
-* [shell 脚本中 echo 显示内容带颜色](#shell-脚本中-echo-显示内容带颜色)
-* [显示当前正在运行的 shell 类型](#显示当前正在运行的-shell-类型)
-* [use terminus font on tty](#use-terminus-font-on-tty)
-* [sed 直接修改文件](#sed-直接修改文件)
-* [bash 批量重命名](#bash-批量重命名)
-* [echo ssid connected](#echo-ssid-connected)
-* [逐行读取的区别(shell)](#逐行读取的区别shell)
-* [youtube-dl 下载视频为 mp3](#youtube-dl-下载视频为-mp3)
-* [xargs usage](#xargs-usage)
-* [Install packages from a text file](#install-packages-from-a-text-file)
-* [cp arguments](#cp-arguments)
-* [show and execable cmd's info](#show-and-execable-cmds-info)
-* [crontab 定时任务](#crontab-定时任务)
+            * [install yay on arch(install software from aur)](#install-yay-on-archinstall-software-from-aur)
+            * [install linux brew](#install-linux-brew)
+            * [install node & npm(nodejs package manager)](#install-node--npmnodejs-package-manager)
+            * [pip install & configration](#pip-install--configration)
+            * [install source-code-pro-fonts](#install-source-code-pro-fonts)
+            * [set goproxy (installing yay time out)](#set-goproxy-installing-yay-time-out)
+            * [install ranger pluign](#install-ranger-pluign)
+            * [alsamixer to control sound](#alsamixer-to-control-sound)
+            * [chromium bookmarks location](#chromium-bookmarks-location)
+            * [auto-pep8 not found when format code in (vim/nvim).](#auto-pep8-not-found-when-format-code-in-vimnvim)
+            * [install samba server && configration](#install-samba-server--configration)
+            * [ag usage (from tldr)](#ag-usage-from-tldr)
+            * [add archlinuxcn repo](#add-archlinuxcn-repo)
+            * [pacman pgp key error](#pacman-pgp-key-error)
+            * [/var/cache/ 空间占用过大](#varcache-空间占用过大)
+            * [用 whiskermenu 代替默认的 xfce4 开始菜单](#用-whiskermenu-代替默认的-xfce4-开始菜单)
+            * [use swap file instead of swap space](#use-swap-file-instead-of-swap-space)
+            * [install bspwm](#install-bspwm)
+            * [install steam](#install-steam)
+            * [where is the documentation and example(template) on linux](#where-is-the-documentation-and-exampletemplate-on-linux)
+            * [install fzf(using git)](#install-fzfusing-git)
+            * [alacritty theme selector](#alacritty-theme-selector)
+            * [config sxhkd shorcut](#config-sxhkd-shorcut)
+            * [Linux Font](#linux-font)
+                * [wd-dict install](#wd-dict-install)
+                * [config static ip on linux](#config-static-ip-on-linux)
+            * [Editing shell cmd with $EDITOR](#editing-shell-cmd-with-editor)
+            * [set the display resolution](#set-the-display-resolution)
+            * [arch 安装中文字体](#arch-安装中文字体)
+                * [使用清华源替换官方 aur 地址](#使用清华源替换官方-aur-地址)
+            * [set LANG enviroment](#set-lang-enviroment)
+            * [xmodmap 修改键位绑定](#xmodmap-修改键位绑定)
+            * [pacman 备份和恢复已安装软件包](#pacman-备份和恢复已安装软件包)
+            * [shell 脚本中 echo 显示内容带颜色](#shell-脚本中-echo-显示内容带颜色)
+            * [显示当前正在运行的 shell 类型](#显示当前正在运行的-shell-类型)
+            * [use terminus font on tty](#use-terminus-font-on-tty)
+            * [sed 直接修改文件](#sed-直接修改文件)
+            * [bash 批量重命名](#bash-批量重命名)
+            * [echo ssid connected](#echo-ssid-connected)
+            * [逐行读取的区别(shell)](#逐行读取的区别shell)
+            * [youtube-dl 下载视频为 mp3](#youtube-dl-下载视频为-mp3)
+            * [xargs usage](#xargs-usage)
+            * [Install packages from a text file](#install-packages-from-a-text-file)
+            * [cp arguments](#cp-arguments)
+            * [show and execable cmd's info](#show-and-execable-cmds-info)
+            * [crontab 定时任务](#crontab-定时任务)
+            * [tmux manaual](#tmux-manaual)
+            * [systemd 电源控制](#systemd-电源控制)
+            * [ssh 免密码登陆](#ssh-免密码登陆)
+* [scp ~/.ssh/id_rsa.pub user@remote_host:](#scp-sshid_rsapub-userremote_host)
+            * [kill and pkill](#kill-and-pkill)
+            * [how to read man page](#how-to-read-man-page)
+            * [更改电源行为(systemd)](#更改电源行为systemd)
 
 <!-- vim-markdown-toc -->
 
@@ -613,5 +620,138 @@ file $(which ping)
 
 #### crontab 定时任务
 
-_/2 _ \* \* \* date >> ~/date.log
+\*/2 \* \* \* \* date >> ~/date.log
 min hour date month day-of-week
+
+#### tmux manaual
+
+rename a session in shell:
+
+```
+tmux rename-session -t oldname newname
+```
+
+concepts:  
+session,window,panel
+
+rename session c-b $
+
+**panel control:**  
+create a new panel(vertical) c-b %  
+switch the pane c-b o  
+kill a panel c-b x  
+maximumize panel c-b z
+
+**windows control:**  
+create new window c-b c  
+kill current win c-b &  
+next window c-b n  
+previous window c-b p  
+rename window's name c-b ,  
+switch the window in a list c-b w
+
+**sessions control**  
+switch the session in a list c-b s  
+detach the current session and exit tmux c-b d  
+rename session c-b $
+
+**run tmux with a exist session:**
+
+```
+tmux att -t session-name
+```
+
+**tmux plugins manager (tpm)**
+
+_Installation_
+
+Requirements: tmux version 1.9 (or higher), git, bash.
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+put this at the bottom of ~/.tmux.conf
+
+> # List of plugins
+>
+> set -g @plugin 'tmux-plugins/tpm'
+> set -g @plugin 'tmux-plugins/tmux-sensible'
+>
+> \# Other examples:
+>
+> \# set -g @plugin 'github_username/plugin_name'
+>
+> \# set -g @plugin 'github_username/plugin_name#branch'
+>
+> \# set -g @plugin 'git@github.com:user/plugin'
+>
+> \# set -g @plugin 'git@bitbucket.com:user/plugin'
+>
+> \# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+>
+> run '~/.tmux/plugins/tpm/tpm'
+
+#### systemd 电源控制
+
+nvim /etc/systemd/logind.conf:
+
+```
+[Login]
+#HandlePowerKey=ignore
+#HandleLidSwitch=ignore
+```
+
+uncomment the \# line above
+**for more info,search 电源管理 systemd at arch wiki**
+
+#### ssh 免密码登陆
+
+原理
+
+步骤  
+generate a keypair on local :
+
+```
+ssh-keygen -t rsa
+```
+
+#scp ~/.ssh/id_rsa.pub user@remote_host:
+
+```
+ssh-copy-id user@remote_host
+```
+
+the ssh public key's path(remote_host):  
+~/.ssh/authorized_keys
+
+#### kill and pkill
+
+kill multi process with regex:(pkill is used to do this)
+
+```
+pkill '^ssh$'
+```
+
+```
+killall -9 firefox
+```
+
+show the pid of porcess name
+ps aux | grep ssh
+
+head -n 10 /etc/passwd | tail -n 5
+tail -f /var/log/nginx/access.log
+
+#### how to read man page
+
+[ ] 表示可选
+| 表示二选一
+大写字母 表示需要被替换(类似变量名)
+小写字母 表示具体的字符
+
+#### 更改电源行为(systemd)
+
+systemd 可以控制笔记开合盖,按下电源键,休眠键盘等一系列行为.  
+若要更改电源行为模式,更改 /etc/systemd/logind.conf,  
+更多请查阅 [systemd-archwiki](<https://wiki.archlinux.org/title/Systemd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 中的电源管理章节.
